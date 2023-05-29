@@ -1,0 +1,28 @@
+service: serverless-typescript-express-example
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  stage: dev
+
+package:
+  excludeDevDependencies: true
+
+plugins:
+  - serverless-plugin-typescript
+
+functions:
+  app:
+    handler: index.handler
+    events:
+      - http:
+          path: /
+          method: ANY
+          cors:
+            origin: "*"
+      - http:
+          path: /{proxy+}
+          method: ANY
+          cors:
+            origin: "*"

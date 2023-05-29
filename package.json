@@ -1,0 +1,19 @@
+{
+  "name": "serverless-typescript-express-example",
+  "version": "1.0.0",
+  "description": "Express application with typescript",
+  "type": "module",
+  "scripts": {
+    "deploy": "serverless deploy",
+    "remove": "serverless remove"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "serverless-http": "^3.1.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "typescript": "^5.0.4",
+    "serverless-plugin-typescript": "^2.1.4"
+  }
+}
